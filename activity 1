@@ -1,0 +1,278 @@
+# Linux-commands
+
+1. whoami
+
+Command:
+
+whoami
+
+Description:
+Displays the current logged-in username.
+
+Output:
+
+darshan
+
+Remarks:
+Confirms which user account is being used.
+
+
+---
+
+2. ls
+
+Command:
+
+ls
+
+Description:
+Lists files and directories in the current directory.
+
+Output:
+
+Desktop  Documents  Downloads  myfile.txt
+
+Remarks:
+Shows only non-hidden files and directories.
+
+
+---
+
+3. ls -l
+
+Command:
+
+ls -l
+
+Description:
+Lists files in long format (permissions, ownership, size, modified date).
+
+Output:
+
+-rw-r--r--  1 darshan users   120 Aug 24 12:30 myfile.txt
+drwxr-xr-x  2 darshan users  4096 Aug 20 11:15 Documents
+
+Remarks:
+Useful for checking file permissions and details.
+
+
+---
+
+4. pwd
+
+Command:
+
+pwd
+
+Description:
+Prints the current working directory path.
+
+Output:
+
+/home/darshan
+
+Remarks:
+Tells you where you are in the filesystem.
+
+
+---
+
+5. man
+
+Command:
+
+man ls
+
+Description:
+Displays the manual (help pages) for a command (here, ls).
+
+Output:
+
+LS(1)                   User Commands                   LS(1)
+
+NAME
+       ls - list directory contents
+...
+
+Remarks:
+Very useful to learn options/usage of any Linux command.
+
+
+---
+
+6. sudo
+
+Command:
+
+sudo ls /root
+
+Description:
+Runs a command with superuser privileges.
+
+Output:
+
+[sudo] password for darshan:
+
+Remarks:
+Asks for password → allows access to restricted files if permission is granted.
+
+
+---
+
+7. tree
+
+Command:
+
+tree
+
+Description:
+Shows directory structure in tree format.
+
+Output:
+
+.
+├── Documents
+│   └── notes.txt
+├── Downloads
+│   └── setup.sh
+└── myfile.txt
+
+Remarks:
+Gives a clear visual of file hierarchy.
+
+
+---
+
+8. cd
+
+Command:
+
+cd Documents
+
+Description:
+Changes the current working directory.
+
+Output:
+(No output if successful)
+
+Remarks:
+Now the user is inside /home/darshan/Documents.
+
+
+---
+
+9. cd ..
+
+Command:
+
+cd ..
+
+Description:
+Moves one directory up from the current location.
+
+Output:
+(No output if successful)
+
+Remarks:
+Now the user is back in /home/darshan.
+
+
+---
+
+10. ifconfig
+
+Command:
+
+ifconfig
+
+Description:
+Shows network interfaces and IP addresses.
+
+Output:
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  
+        inet 192.168.1.10  netmask 255.255.255.0  broadcast 192.168.1.255
+lo: flags=73<UP,LOOPBACK,RUNNING>
+        inet 127.0.0.1  netmask 255.0.0.0
+
+Remarks:
+Useful for checking IP address and connectivity.
+
+
+---
+
+11. ping
+
+Command:
+
+ping google.com -c 4
+
+Description:
+Tests network connectivity by sending packets.
+
+Output:
+
+PING google.com (142.250.183.238): 56 data bytes
+64 bytes from 142.250.183.238: icmp_seq=1 ttl=118 time=24.5 ms
+64 bytes from 142.250.183.238: icmp_seq=2 ttl=118 time=25.1 ms
+64 bytes from 142.250.183.238: icmp_seq=3 ttl=118 time=24.9 ms
+64 bytes from 142.250.183.238: icmp_seq=4 ttl=118 time=25.3 ms
+
+--- google.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss
+
+Remarks:
+Confirms internet connectivity to Google with response time.
+3. ls -a
+
+Command:
+
+ls -a
+
+Description:
+Lists all files, including hidden ones (those starting with .).
+
+Output:
+
+.  ..  .bashrc  .profile  Desktop  Documents  myfile.txt
+
+Remarks:
+Shows hidden configuration files and the . (current dir) and .. (parent dir).
+
+
+---
+
+4. ls -b
+
+Command:
+
+ls -b
+
+Description:
+Lists files, but escapes non-printable characters (shows them as \xxx).
+
+Output:
+
+Desktop  Documents  Downloads  file\ with\ spaces.txt
+
+Remarks:
+Useful if filenames have spaces or special characters.
+
+
+---
+
+5. ls -c
+
+Command:
+
+ls -c
+
+Description:
+Lists files sorted by last modification time (newest first).
+
+Output:
+
+myfile.txt  Downloads  Desktop  Documents
+
+Remarks:
+Helps track which files were modified most recently
